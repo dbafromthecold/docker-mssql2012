@@ -7,12 +7,9 @@ FROM dbafromthecold/windowsservercore:v1
 # create directory to hold installer and config file
 RUN powershell -Command (mkdir C:\SQL2012)
 
-# copy media into container
-# media must reside in the same location as the dockerfile
+# copy media & config file into container
+# both files need to reside in the same location as the dockerfile
 COPY SQLServer2012_Dev_SP3 C:\SQL2012
-
-# copy config file into container
-# config file must also reside in the same location as the dockerfile
 COPY SQLServer2012InstallConfig.ini C:\SQL2012
 
 # install SQL Server
