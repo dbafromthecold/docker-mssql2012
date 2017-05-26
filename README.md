@@ -7,5 +7,5 @@ Pre-requisities: <br>
 SQL Server 2012 SP3 downloaded and extracted into a folder named SQLServer2012_Dev_SP3
 dbafromthecold/windowsservercore:v1 pulled from the docker hub
 
-Run command: <br>
+Build command: <br>
 docker build -t sqlserver2012sp3 .
