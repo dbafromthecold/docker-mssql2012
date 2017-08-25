@@ -1,7 +1,4 @@
-# using my own windowsservercore image 
-# this has .Net 3.5 installed which is a prerequisite for SQL Server 2012
-# publicly available on the docker hub...
-# docker pull dbafromthecold/windowsservercore:v1
+# using my own windowsservercore image with .Net 3.5 installed 
 FROM dbafromthecold/windowsservercore:v1
 
 LABEL maintainer "Andrew Pruski"
@@ -10,7 +7,6 @@ LABEL maintainer "Andrew Pruski"
 RUN powershell -Command (mkdir C:\SQL2012)
 
 # copy media & config file into container
-# both files need to reside in the same location as the dockerfile
 COPY SQLServer2012_Dev_SP3 C:\SQL2012
 COPY SQLServer2012InstallConfig.ini C:\SQL2012
 
