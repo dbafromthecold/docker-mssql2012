@@ -4,6 +4,8 @@
 # docker pull dbafromthecold/windowsservercore:v1
 FROM dbafromthecold/windowsservercore:v1
 
+LABEL maintainer "Andrew Pruski"
+
 # create directory to hold installer and config file
 RUN powershell -Command (mkdir C:\SQL2012)
 
