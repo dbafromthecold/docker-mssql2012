@@ -15,6 +15,3 @@ RUN C:\SQL2012\Setup.exe /ConfigurationFile=C:\SQL2012\SQLServer2012InstallConfi
 
 # remove install files to reduce image size
 RUN powershell -Command (rm C:\SQL2012 -recurse)
-
-# run SQL Server to prevent container from auto-shutdown
-RUN "C:\Program Files\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\Binn\sqlservr.exe" -sMSSQLSERVER
