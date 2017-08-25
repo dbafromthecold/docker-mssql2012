@@ -15,5 +15,8 @@ COPY SQLServer2012InstallConfig.ini C:\SQL2012
 # install SQL Server
 RUN C:\SQL2012\Setup.exe /ConfigurationFile=C:\SQL2012\SQLServer2012InstallConfig.ini
 
+# run SQL Server to prevent container from auto-shutdown
+CMD "C:\SQLServer\MSSQL11.MSSQLSERVER\MSSQL\Binn\sqlservr.exe" -sMSSQLSERVER
+
 # remove install files to reduce image size
 RUN powershell -Command (rm C:\SQL2012 -recurse)
