@@ -1,4 +1,4 @@
-# docker-mssql2012
+### docker-mssql2012
 Dockerfile to create SQL Server 2012 container image
 
 Dockerfile will create a container running SQL Server 2012 SP3 Developer Edition.
