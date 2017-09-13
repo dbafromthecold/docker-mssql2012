@@ -2,10 +2,10 @@ FROM dbafromthecold/windowsservercore:v1
 
 LABEL maintainer "Andrew Pruski"
 
-# create directory to hold installer and config file
+# create directory to hold installation media
 RUN powershell -Command (mkdir C:\SQL2012)
 
-# copy media & config file into container
+# copy media into container
 COPY SQLServer2012_Dev_SP3 C:\SQL2012
 
 # install SQL Server
